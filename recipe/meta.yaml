@@ -1,5 +1,5 @@
 {% set name = "napari-blossom" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-blossom-{{ version }}.tar.gz
-  sha256: e19a2b748d64d383cf20547db6ef531954980b494a2b208921aa6df9aa11e1d2
+  sha256: 6350c2553c6e9390c779b0f58eb53986788d086b93ec2d6d05bf798abeae348e
 
 build:
   noarch: python
@@ -18,7 +18,9 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools-scm
   run:
+    - focal-loss
     - magicgui
     - napari
     - numpy
@@ -33,7 +35,7 @@ test:
     - napari_blossom
   commands:
     - pip list
-    - pip check
+    # - pip check  # Fails due to opencv-python-headless
   requires:
     - pip
 
