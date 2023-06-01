@@ -1,11 +1,11 @@
-About napari-blossom
-====================
+About napari-blossom-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-blossom-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/hereariim/napari-blossom
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-blossom-feedstock/blob/main/LICENSE.txt)
 
 Summary: Segmentation of blossom apple tree images
 
