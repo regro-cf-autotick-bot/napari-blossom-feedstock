@@ -1,5 +1,5 @@
 {% set name = "napari-blossom" %}
-{% set version = "0.0.4" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-blossom-{{ version }}.tar.gz
-  sha256: 0aea29fe92878b75ab430e8d61c8da5046de42c22b95f3a2fa19b76af4dcd39f
+  sha256: de97cc4812a9988e25e8ab74440d703976aaeb67897b11fef93a2ebd38f6ca08
 
 build:
   noarch: python
