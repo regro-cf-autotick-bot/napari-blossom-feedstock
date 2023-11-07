@@ -27,12 +27,12 @@ requirements:
     - napari
     - numpy >=1.23.0
     - opencv >=4.7.0.68
-    # - pillow >=9.3.0  # Not imported
+    - pillow >=9.3.0
     - python >=3.8
     - qtpy
     - scikit-image >=0.19.3
     - tensorflow >=2.11.0
-    - tqdm >=4.64.1  # Imported but not in requirements
+    - tqdm >=4.64.1
 
 test:
   imports:
