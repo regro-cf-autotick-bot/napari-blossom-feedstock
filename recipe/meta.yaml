@@ -20,15 +20,17 @@ requirements:
     - python >=3.8
     - setuptools-scm
   run:
-    - focal-loss
-    - magicgui
+    - focal-loss >=0.0.7
+    - magicgui >=0.6.1
     - napari
-    - numpy
-    - opencv
+    - numpy >=1.23.0
+    - opencv >=4.7.0.68
+    # - pillow >=9.3.0  # Not imported
     - python >=3.8
     - qtpy
-    - scikit-image
-    - tensorflow
+    - scikit-image >=0.19.3
+    - tensorflow >=2.11.0
+    - tqdm >=4.64.1  # Imported but not in requirements
 
 test:
   imports:
