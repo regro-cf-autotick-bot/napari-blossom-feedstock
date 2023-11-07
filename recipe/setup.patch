@@ -1,0 +1,61 @@
+diff --git a/setup.cfg b/setup.cfg
+index b438e39..92007fe 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -41,7 +41,7 @@ install_requires =
+ 	focal_loss==0.0.7
+ 	pillow==9.3.0
+ 	tqdm==4.64.1
+-python_requires = ==3.8
++python_requires = >=3.8
+ include_package_data = True
+ package_dir = 
+ 	=src
+diff --git a/setup.py b/setup.py
+deleted file mode 100644
+index 9ff8f33..0000000
+--- a/setup.py
++++ /dev/null
+@@ -1,41 +0,0 @@
+-"""Setup for the python package.""" 
+-from setuptools import setup, find_packages
+-with open("README.md", "r", encoding="utf-8") as fh: 
+-     long_description = fh.read() 
+-setup(    
+-    author="Herearii Metuarea",    
+-    author_email="herearii.metuarea@gmail.com",
+-    name='napari-blossom', 
+-    description='Segmentation of blossom apple tree images',  
+-    version="0.1.4",    
+-    long_description=long_description, 
+-    long_description_content_type="text/markdown",  
+-    url='https://github.com/hereariim/napari-blossom', 
+-    packages=find_packages(),
+-    python_requires="==3.8",
+-    install_requires=[
+-     'numpy==1.23.0',
+-    'magicgui==0.6.1',
+-    'qtpy',
+-    'opencv-python-headless==4.7.0.68',
+-    'tensorflow==2.11.0',
+-    'scikit-image==0.19.3',
+-    'napari',
+-    'focal_loss==0.0.7',
+-    'pillow==9.3.0',
+-    'tqdm==4.64.1'
+-    ], 
+-    classifiers=[ 'Development Status :: 2 - Pre-Alpha',
+-                     'Framework :: napari',
+-    'Intended Audience :: Developers',
+-    'License :: OSI Approved :: BSD License',
+-    'Operating System :: OS Independent',
+-    'Programming Language :: Python',
+-    'Programming Language :: Python :: 3',
+-    'Programming Language :: Python :: 3 :: Only',
+-    'Programming Language :: Python :: 3.8',
+-    'Programming Language :: Python :: 3.9',
+-    'Programming Language :: Python :: 3.10',
+-    'Topic :: Software Development :: Testing',
+-                ],
+-     )
+\ No newline at end of file
