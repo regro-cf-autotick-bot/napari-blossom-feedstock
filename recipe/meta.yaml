@@ -1,5 +1,5 @@
 {% set name = "napari-blossom" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-blossom-{{ version }}.tar.gz
-  sha256: aa74eb009049194aa75e40e66fc04f8e530b2170c22beedfb7d218d7e8f4eca8
+  sha256: c3b377691a18c75e85f0927e36c2a18b2bf1e0d45fed5f232b90f2a0d5b49148
   patches:
     - setup.patch
 
@@ -27,12 +27,12 @@ requirements:
     - napari
     - numpy >=1.23.0
     - opencv >=4.7.0.68
-    # - pillow >=9.3.0  # Not imported
+    - pillow >=9.3.0
     - python >=3.8
     - qtpy
     - scikit-image >=0.19.3
     - tensorflow >=2.11.0
-    - tqdm >=4.64.1  # Imported but not in requirements
+    - tqdm >=4.64.1
 
 test:
   imports:
