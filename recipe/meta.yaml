@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-blossom-{{ version }}.tar.gz
   sha256: c3b377691a18c75e85f0927e36c2a18b2bf1e0d45fed5f232b90f2a0d5b49148
+  patches:
+    - setup.patch
 
 build:
   noarch: python
