@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-blossom-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari-blossom-{{ version }}.tar.gz
   sha256: c3b377691a18c75e85f0927e36c2a18b2bf1e0d45fed5f232b90f2a0d5b49148
   patches:
     - setup.patch
@@ -14,12 +14,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - focal-loss >=0.0.7
@@ -28,7 +28,7 @@ requirements:
     - numpy >=1.23.0
     - opencv >=4.7.0.68
     - pillow >=9.3.0
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy
     - scikit-image >=0.19.3
     - tensorflow >=2.11.0
@@ -43,6 +43,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-blossom
